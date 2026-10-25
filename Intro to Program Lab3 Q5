@@ -1,0 +1,18 @@
+def accept_login(users,username,password):
+        return username in users and users[username] == password
+
+# Calling / Test Code
+users = {
+    "David": "password123",
+    "Kevin": "helloworld",
+    "Chloe": "123password"
+}
+
+name = input("Please enter your username: ")
+userpass = input("Please enter your password: ")
+
+if accept_login(users, name, userpass):
+        print("Login successful!")
+else:
+    print("Login failed.")
+
